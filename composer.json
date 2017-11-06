@@ -1,0 +1,28 @@
+{
+  "name": "brick/storage",
+  "description": "A common object storage interface",
+  "type": "library",
+  "keywords": [
+    "Brick",
+    "Storage",
+    "Object storage"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.4",
+    "satooshi/php-coveralls": "1.*",
+    "aws/aws-sdk-php": "3.*"
+  },
+  "suggest": {
+    "aws/aws-sdk-php" : "To use S3Storage"
+  },
+  "autoload": {
+    "psr-4": {
+      "Brick\\Storage\\": "src/",
+      "Brick\\Storage\\Tests\\": "tests/"
+    }
+  }
+}
