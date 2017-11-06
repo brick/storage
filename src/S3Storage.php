@@ -61,7 +61,7 @@ class S3Storage implements Storage
 
             return (string) $model->get('Body');
         } catch (S3Exception $e) {
-            if ($e->getAwsErrorCode() == 'NoSuchKey') {
+            if ($e->getAwsErrorCode() === 'NoSuchKey') {
                 throw Exception\NotFoundException::pathNotFound($path, $e);
             }
 

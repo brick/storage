@@ -46,7 +46,7 @@ class LocalStorage implements Storage
 
         // Check that the path does not contain relative folders
         foreach ($path as $element) {
-            if ($element == '.' || $element == '..') {
+            if ($element === '.' || $element === '..') {
                 throw new \InvalidArgumentException('The path cannot contain . or ..');
             }
         }
