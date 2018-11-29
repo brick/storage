@@ -16,22 +16,10 @@ This library offers a common interface that can be used to store objects in a fi
 Installation
 ------------
 
-This library is installable via [Composer](https://getcomposer.org/).
-
-Just run:
+This library is installable via [Composer](https://getcomposer.org/):
 
 ```bash
 composer require brick/storage
-```
-
-or manually define the following requirement in your `composer.json` file:
-
-```json
-{
-    "require": {
-        "brick/storage": "0.1.*"
-    }
-}
 ```
 
 Requirements
