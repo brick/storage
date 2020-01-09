@@ -13,7 +13,7 @@ class StorageException extends \RuntimeException
      *
      * @return StorageException
      */
-    public static function putError(string $path, \Exception $previous = null) : StorageException
+    public static function putError(string $path, ?\Exception $previous = null) : StorageException
     {
         return new self(sprintf('Could not put the given object at "%s".', $path), 0, $previous);
     }
@@ -24,7 +24,7 @@ class StorageException extends \RuntimeException
      *
      * @return StorageException
      */
-    public static function getError(string $path, \Exception $previous = null) : StorageException
+    public static function getError(string $path, ?\Exception $previous = null) : StorageException
     {
         return new self(sprintf('Could not get the given object at "%s".', $path), 0, $previous);
     }
@@ -35,7 +35,7 @@ class StorageException extends \RuntimeException
      *
      * @return StorageException
      */
-    public static function deleteError(string $path, \Exception $previous = null) : StorageException
+    public static function deleteError(string $path, ?\Exception $previous = null) : StorageException
     {
         return new self(sprintf('Could not remove the given object at "%s".', $path), 0, $previous);
     }

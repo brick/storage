@@ -13,7 +13,7 @@ class NotFoundException extends StorageException
      *
      * @return NotFoundException
      */
-    public static function pathNotFound(string $path, \Exception $previous = null) : NotFoundException
+    public static function pathNotFound(string $path, ?\Exception $previous = null) : NotFoundException
      {
          return new self(sprintf('The path "%s" does not exist', $path), 0, $previous);
      }
